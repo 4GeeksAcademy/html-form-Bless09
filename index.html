@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous"
+        />
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+        />
+        <title>Bootstrap form</title>
+
+        <style>
+            .amount {
+                position: relative;
+
+            }
+            .euro {
+                position: relative;
+                top: 38px;
+                right: 58px;
+            }
+        </style>
+    </head>
+    <body class="min-vh-100 d-flex justify-content-center align-items-center">
+        <div class="container d-flex justify-content-center align-items-center min-vh-100">
+            <form class="row border rounded">
+                
+                    <h2 class="bg-light p-2 px-4" style="padding: 0px 0px; margin: 0;">Payment form example</h2>
+                     <p class="alert-danger danger mt-3 px-3 border" style="padding: 8px 0; border-radius:5px ; margin: 0px auto; width: 98%;">Some fields are missing</p>
+                
+                <div class="col-md-5  g-3">
+                <label for="inputEmail4" class="form-label">card #</label>
+                <input type="text" class="form-control" id="inputEmail4" placeholder="xxxxxxxxxxxxxxxx">
+                </div>
+                <div class="col-md-3  g-3">
+                <label for="inputPassword3" class="form-label">CVC #</label>
+                <input type="password" class="form-control" id="inputPassword3" placeholder="0000">
+                </div>
+                <div class="col-md-4 amount g-3">
+                    <label for="inputPassword4" class="form-label">Amount</label>
+                    <i class="fa-solid fa-euro-sign euro" style="font-size: 12px;"></i>
+                    <input type="number" class="form-control" id="inputPassword4" step="0.01" min="0" placeholder="Amount">
+                </div>
+                <div class="col-6 g-3">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="First name" aria-label="First name">
+                </div>
+                <div class="col-6 g-3">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Last name" aria-label="Last name">
+                </div>
+                <div class="col-md-6 g-3">
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="col-md-3 g-3">
+                <label for="inputState" class="form-label">State</label>
+                <select id="inputState" class="form-select">
+                    <option selected>Choose...</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                    <option value="4">Option 4</option>
+                </select>
+                </div>
+                <div class="col-md-3 g-3">
+                <label for="inputZip" class="form-label">Postal Code</label>
+                <input type="text" class="form-control" id="inputZip">
+                </div>
+                <div class="col-md-4 g-3">
+                    <h6 class="form-label">
+                        We accept:</h6> 
+                    <div class="bg-secondary p-1 d-flex align-items-center justify-content-center" style="width: 250px; border-radius: 3px;">
+                        <div class="form-check d-flex align-items-center gap-1">
+                    <input class="form-check-input" style="font-size: 13px;"  type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                    <i class="fa-brands fa-cc-visa" style="padding: 0px 10px 0px 0px; font-size: 25px;"></i> 
+                        </div>
+                        <div class="form-check d-flex align-items-center gap-1">
+                    <input class="form-check-input" style="font-size: 13px;" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <i class="fa-brands fa-cc-mastercard" style="padding: 0px 10px 0px 0px; font-size: 25px;"></i>
+                    </div>
+                    <div class="form-check d-flex align-items-center gap-1">
+                    <input class="form-check-input" style="font-size: 13px;" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+                    <i class="fa-brands fa-cc-amex" style="padding: 0px 10px 0px 0px; font-size: 25px;"></i>
+                </div>
+                <div class="form-check d-flex align-items-center gap-1">
+                    <input class="form-check-input" style="font-size: 13px;" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
+                    <i class="fa-brands fa-cc-paypal" style="padding: 0px; font-size: 25px;"></i>
+                </div>
+                    </div>
+                
+                </div>
+                <div class="col-md-2 g-3">
+                </div>
+                <div class="col-md-6 g-3">
+                    <label for="floatingTextarea2" class="form-label">Message</label>
+                    <textarea class="form-control" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <em>Add any notes here</em>
+                  </div>
+               
+
+                <div class="col-12 g-3 d-flex justify-content-end gap-1 bg-light p-2">
+                <button type="submit" class="btn btn-secondary">Cancel</button>
+                <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+            </form>
+
+        </div>
+
+
+
+        <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"
+        ></script>
+    </body>
+    </html>
